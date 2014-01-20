@@ -3,5 +3,8 @@
 
 (defn init
   []
-  (vertx/periodic 1000
-                  (println "I'm working!")))
+  (vertx/deploy-module "io.vertx~mod-web-server~2.0.0-final"
+                       :config {:port 8080
+                                :host "localhost"
+                                :web_root "web/app"}))
+

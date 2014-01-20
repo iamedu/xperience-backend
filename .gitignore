@@ -4,6 +4,7 @@
 *.jar
 *.war
 *.ear
+target
 
 # Clojure files
 mods
