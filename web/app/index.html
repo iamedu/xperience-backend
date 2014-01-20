@@ -13,6 +13,7 @@
 
     <!-- build:css({.tmp,app}) styles/main.css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
 </head>
@@ -27,6 +28,7 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
+    <div class="container" ng-include="'views/menu.html'"></div>
     <div class="container" ng-view=""></div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -43,8 +45,11 @@
 
     <script src="bower_components/jquery/jquery.min.js"></script>
     <script src="bower_components/lodash/dist/lodash.min.js"></script>
-    <script src="bower_components/bootstrap/dist/bootstrap.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/sockjs/sockjs.min.js"></script>
+    <script src="bower_components/vertxbus.js/index.js"></script>
     <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-vertxbus/dist/angular-vertxbus-0.4.5.min.js"></script>
 
     <!-- build:js scripts/modules.js -->
     <script src="bower_components/angular-resource/angular-resource.js"></script>
@@ -56,6 +61,8 @@
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/dashboard.js"></script>
+    <script src="scripts/controllers/menu.js"></script>
     <!-- endbuild -->
 </body>
 </html>
