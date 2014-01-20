@@ -1,1 +1,32 @@
-<p>This is the dashboard view.</p>
+<div class="row">
+  <h4 ng-show="noSearch">There is no search configured for you <small>You should configure one now</small></h4>
+  <form class="form-inline" role="form" ng-show="showCreateSearch">
+      <div class="form-group">
+          <label class="sr-only" for="search">Search</label>
+          <input type="text" class="form-control" id="search" placeholder="Enter search string" ng-model="search.hashtag">
+      </div>
+      <button type="submit" class="btn btn-info" ng-click="saveSearch(search)">Save search</button>
+  </form>
+</div>
+
+<div class="row" ng-show="showCreateSearch">
+  <button class="btn btn-danger" ng-click="showCreateSearch=false">Hide search</button>
+</div>
+
+<div class="row" ng-show="!showCreateSearch">
+  <button class="btn btn-default" ng-click="showCreateSearch=true">Show search</button>
+</div>
+
+<div class="row" ng-show="!noSearch">
+  <h1>Media found for #{{search.hashtag}}</h1>
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="navbar-header">
+      <a class="navbar-brand" href>Media Types</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-3">
+      <button type="button" class="btn btn-default navbar-btn">Microblog</button>
+      <button type="button" class="btn btn-default navbar-btn">Pictures</button>
+      <button type="button" class="btn btn-default navbar-btn">Videos</button>
+    </div>
+  </nav>
+</div>

@@ -6,6 +6,7 @@ angular.module('webApp')
       vertxEventBus.login(username, password, function (reply) {
         if(reply && reply.status === 'ok') {
           $rootScope.loggedIn = true;
+          $rootScope.loggedUser = username;
           $location.path('/dashboard');
         } else {
           $rootScope.loggedIn = false;

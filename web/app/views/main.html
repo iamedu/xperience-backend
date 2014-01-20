@@ -1,4 +1,8 @@
-<div class="jumbotron">
+<div class="jumbotron" ng-show="loggedIn">
+  <h1>Already logged in</h1>
+  <a ng-href="#/dashboard">Back to dashboard</a>
+</div>
+<div class="jumbotron" ng-show="!loggedIn">
   <h1>Hello, please login</h1>
   <form class="form-horizontal" role="form">
     <p>

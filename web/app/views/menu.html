@@ -1,6 +1,7 @@
 <div class="header ng-scope" ng-controller="MenuCtrl">
   <ul class="nav nav-pills pull-right">
-    <li class="active"><a ng-href="#" href="#">Home</a></li>
+    <li class="active"><a ng-click="home()" href>Home</a></li>
+    <li ng-show="loggedIn" class="ng-hide"><a ng-href="#/devices" href>Devices</a></li>
     <li ng-show="loggedIn" class="ng-hide"><a ng-click="logout()" href>Logout</a></li>
   </ul>
   <h3 class="text-muted">Experience Hub</h3>
